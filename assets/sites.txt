@@ -1,33 +1,46 @@
 # One line per url
 # Comments with # are ignored
+# Lines starting with $name define a cron spec
+# Lines starting with @name use a previously defined cron spec name to scan a url
+# Cron spec names can be alphanumeric without whitespace.
+# Cron specs are by default 'fuzzed' to occur at a random minute and second to avoid overloading.
+# The nume must contain the substring 'exact' to avoid fuzzing.
+
+#= SPECS
+
+# All of these specs are fuzzed to random minutes and seconds.
+$hourly 0 0 * * * *
+
 
 #= SCIENCE
 
 #== WILDFIRE
 
 # Daily wildfire situation report
-https://www.nifc.gov/nicc/sitreprt.pdf
+@hourly https://www.nifc.gov/nicc/sitreprt.pdf
+
 # Large fire data in JSON
-https://rmgsc.cr.usgs.gov/arcgis/rest/services/geomac_fires/FeatureServer/1/query?where=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=*&f=pjson
+@hourly https://rmgsc.cr.usgs.gov/arcgis/rest/services/geomac_fires/FeatureServer/1/query?where=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=*&f=pjson
+
 # Large fire perimeters in JSON
-https://rmgsc.cr.usgs.gov/arcgis/rest/services/geomac_fires/FeatureServer/2/query?where=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=*&returnGeometry=true&maxAllowableOffset=&geometryPrecision=&outSR=&gdbVersion=&historicMoment=&returnDistinctValues=false&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&multipatchOption=&resultOffset=&resultRecordCount=1000&returnTrueCurves=false&sqlFormat=none&f=pjson
+@hourly https://rmgsc.cr.usgs.gov/arcgis/rest/services/geomac_fires/FeatureServer/2/query?where=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=*&returnGeometry=true&maxAllowableOffset=&geometryPrecision=&outSR=&gdbVersion=&historicMoment=&returnDistinctValues=false&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&multipatchOption=&resultOffset=&resultRecordCount=1000&returnTrueCurves=false&sqlFormat=none&f=pjson
 
 # NWCG briefings
-https://maps.nwcg.gov/sa/publicData.json
-https://maps.nwcg.gov/sa/publicBriefingData.json
+@hourly https://maps.nwcg.gov/sa/publicData.json
+@hourly https://maps.nwcg.gov/sa/publicBriefingData.json
 
 # Text fire report
-https://www.nifc.gov/fireInfo/nfn.htm
+@hourly https://www.nifc.gov/fireInfo/nfn.htm
 # Fire article updates
-https://inciweb.nwcg.gov/feeds/rss/articles/
+@hourly https://inciweb.nwcg.gov/feeds/rss/articles/
 # Fire incident updates
-https://inciweb.nwcg.gov/feeds/rss/incidents/
+@hourly https://inciweb.nwcg.gov/feeds/rss/incidents/
 
 
 
 #= POLITICS
 
 #== POTUS
-https://twitter.com/POTUS
-https://twitter.com/realDonaldTrump
+@hourly https://twitter.com/POTUS
+@hourly https://twitter.com/realDonaldTrump
 

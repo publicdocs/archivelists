@@ -1,0 +1,29 @@
+# One line per url
+# Comments with # are ignored
+
+#= SCIENCE
+
+#== WILDFIRE
+
+# Daily wildfire situation report
+https://www.nifc.gov/nicc/sitreprt.pdf
+# Large fire data in JSON
+https://rmgsc.cr.usgs.gov/arcgis/rest/services/geomac_fires/FeatureServer/1/query?where=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=*&f=pjson
+# Large fire perimeters in JSON
+https://rmgsc.cr.usgs.gov/arcgis/rest/services/geomac_fires/FeatureServer/2/query?where=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=*&returnGeometry=true&maxAllowableOffset=&geometryPrecision=&outSR=&gdbVersion=&historicMoment=&returnDistinctValues=false&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&multipatchOption=&resultOffset=&resultRecordCount=1000&returnTrueCurves=false&sqlFormat=none&f=pjson
+
+# Text fire report
+https://www.nifc.gov/fireInfo/nfn.htm
+# Fire article updates
+https://inciweb.nwcg.gov/feeds/rss/articles/
+# Fire incident updates
+https://inciweb.nwcg.gov/feeds/rss/incidents/
+
+
+
+#= POLITICS
+
+#== POTUS
+https://twitter.com/POTUS
+https://twitter.com/realDonaldTrump
+

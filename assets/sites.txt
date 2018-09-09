@@ -12,6 +12,10 @@ https://rmgsc.cr.usgs.gov/arcgis/rest/services/geomac_fires/FeatureServer/1/quer
 # Large fire perimeters in JSON
 https://rmgsc.cr.usgs.gov/arcgis/rest/services/geomac_fires/FeatureServer/2/query?where=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=*&returnGeometry=true&maxAllowableOffset=&geometryPrecision=&outSR=&gdbVersion=&historicMoment=&returnDistinctValues=false&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&multipatchOption=&resultOffset=&resultRecordCount=1000&returnTrueCurves=false&sqlFormat=none&f=pjson
 
+# NWCG briefings
+https://maps.nwcg.gov/sa/publicData.json
+https://maps.nwcg.gov/sa/publicBriefingData.json
+
 # Text fire report
 https://www.nifc.gov/fireInfo/nfn.htm
 # Fire article updates
